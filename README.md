@@ -64,6 +64,7 @@ Warehouse.cs
 ![Robot Overview](Images/script4.png)
 ### OptimalRoute.cs
 - utilizes a recursive backtracking algorithm to calculate the optimal path between two warehouse nodes. It incorporates efficient branch pruning conditions to ensure fast computation of the optimal route.
+
 ![Robot Overview](Images/script5.png)
 ### Robot_rightSensor.cs
 - utilizes box colliders set as triggers to simulate a proximity sensor for detecting objects in front of and to the right of a robot. This script modifies the rightSensorCollision variable in the associated Robot.cs script to indicate collision status changes. Robot.cs then determines appropriate actions based on these collision detections, enabling collision avoidance behavior in the robotic system.
@@ -89,6 +90,7 @@ a straightforward script designed to manage the behavior of boxes within the war
 ### RobotWheel.cs
  a script responsible for simulating the movement of servo-motors and wheels within a robotic system in the Unity environment. It receives speed parameters from the associated robot script to control wheel movement. The script includes functionality to automatically stop servos and wheels when the robot is stationary, managed through a stop variable set by the robot script.
 Robot.cs coordinates with Robot_wheels.cs to manipulate the stop variable, ensuring that wheel movement is locked during specific robot states such as PickingUp, RampGoingDown, Unloading, and RampGoingUp. This integration ensures realistic wheel behavior and enhances safety and operational control within the simulated warehouse environment.
+
 ![Robot Overview](Images/script9.png)
 ![Robot Overview](Images/script10.png)
 
