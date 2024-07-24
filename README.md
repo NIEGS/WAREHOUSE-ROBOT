@@ -144,5 +144,14 @@ Robot.cs coordinates with Robot_wheels.cs to manipulate the stop variable, ensur
 ## Hands on Activities
   [View Project Documentation](https://docs.google.com/document/d/1QbCU5kkR3be_CvvwBwkss8JpcggZEdoY/edit?usp=sharing&ouid=101734205070446539416&rtpof=true&sd=true).
 
+# Group Members
+
+- **Neil Bryan Bautista**
+- **Jude Gajitos**
+- **Archie Manalo**
+- **Lucky Millare**
+- ****Baron Niegos**
+- **Sancon Baldemor Simon**
+- **Nicko Venancio**
 
 
