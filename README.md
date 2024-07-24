@@ -51,6 +51,7 @@
 - The robot begins in the NotReady state outside the warehouse, uses node locations to find the closest one, and rotates to face it. Upon reaching a node, it switches to Available. In this state, the Warehouse_orders.cs script assigns tasks like picking up boxes, transitioning the robot to OnWayToPick, then to PickingUp when at the box. If the container fills, it changes to OnWayToDrop, unloads boxes (PrepareUnloading, RampGoingDown, Unloading, RampGoingUp), then returns to Available. Customizable variables like speed and capacity are adjustable in Unity, and new robots can be added easily without code modification, detected automatically by scripts upon startup.
 
 ![Robot Overview](Images/script1.png)
+
 Warehouse.cs
 - The script manages initialization of all nodes and robots in the scene, maintaining lists of both entities. It ensures robots are prepared after reaching their nearest node, ready to begin order collection. Using the setRobotRoute method, it assigns routes to robots, facilitating movement between nodes within the warehouse or starting from the robot's closest node.
 ![Robot Overview](Images/script2.png)
@@ -75,7 +76,9 @@ Warehouse.cs
 - manages rows within the warehouse by utilizing a RowID variable. This variable is utilized by Warehouse_node.cs objects within the same row to automate the generation of their Edge2 variable. This approach streamlines the edge generation process, ensuring efficient and accurate connectivity between nodes within the warehouse structure
 ### Robot_arm.cs
 - Robot_arm.cs is a versatile script designed for managing robotic arm joints and their kinematics within a Unity environment. It supports scalability by allowing the addition of new joints directly from the Unity Inspector's game object settings, without requiring any code modifications. The script provides procedures for kinematic operations, enabling precise control over joint configurations, rotation axes, speed, and angle constraints. This flexible design facilitates easy customization and adjustment of robotic arm functionalities to suit specific project requirements.
+
 ![Robot Overview](Images/script7.png)
+
 ### Warehouse_training.cs
 - manages training mode functionality within the warehouse automation system. When enabled, the script automatically adjusts weights in the formula used to determine the most suitable robot for picking up orders. These adjustments occur after processing a specified number of orders, with weights modified based on the inverse of the processing time for those orders. This iterative process continues multiple times, aiming to identify optimal weights that minimize total order processing time. The script saves these optimal weights using PlayerPrefs, ensuring persistence across sessions for improved efficiency in task assignment and robot optimization.
 ![Robot Overview](Images/script8.png)
@@ -94,6 +97,7 @@ a straightforward script designed to manage the behavior of boxes within the war
 Robot.cs coordinates with Robot_wheels.cs to manipulate the stop variable, ensuring that wheel movement is locked during specific robot states such as PickingUp, RampGoingDown, Unloading, and RampGoingUp. This integration ensures realistic wheel behavior and enhances safety and operational control within the simulated warehouse environment.
 
 ![Robot Overview](Images/script9.png)
+
 ![Robot Overview](Images/script10.png)
 
 
