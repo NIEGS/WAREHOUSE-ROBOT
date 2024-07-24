@@ -44,7 +44,8 @@
 
 ### Warehouse Robot Diagram
 ### Diagram 1
-![Diagram 1](diagram1.png)![Diagram 2](diagram2.png)
+![Diagram 1](diagram1.png)
+![Diagram 2](diagram2.png)
 
 
 
