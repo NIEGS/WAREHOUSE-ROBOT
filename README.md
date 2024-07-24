@@ -38,37 +38,37 @@
 - RampGoingUp: Elevating the ramp after completing box unloading.
 
 ### Warehouse Robot Diagram
-![Diagram 1](images/diagram1.png)
+![Diagram 1](Images/diagram1.png)
 
-![Diagram 2](images/diagram2.png)
+![Diagram 2](Images/diagram2.png)
 
 ### Warehouse Robot Flowchart
-![Flowchart 1](images/flowchart1.png)
+![Flowchart 1](Images/flowchart1.png)
 
-![Flowchart 2](images/flowchart2.png)
-![Flowchart 3](images/flowchart3.png)
+![Flowchart 2](Images/flowchart2.png)
+![Flowchart 3](Images/flowchart3.png)
 
-![Flowchart 4](images/flowchart4.png)
-![Flowchart 5](images/flowchart5.png)
+![Flowchart 4](Images/flowchart4.png)
+![Flowchart 5](Images/flowchart5.png)
 
-![Flowchart 6](images/flowchart6.png)
+![Flowchart 6](Images/flowchart6.png)
 
-![Flowchart 7](images/flowchart7.png)
+![Flowchart 7](Images/flowchart7.png)
 
-![Flowchart 8](images/flowchart8.png)
+![Flowchart 8](Images/flowchart8.png)
 
-![Flowchart 9](images/flowchart9.png)
+![Flowchart 9](Images/flowchart9.png)
 
-![Flowchart 10](images/flowchart10.png)
+![Flowchart 10](Images/flowchart10.png)
 
-![Flowchart 11](images/flowchart11.png)
+![Flowchart 11](Images/flowchart11.png)
 
-![Flowchart 12](images/flowchart12.png)
-![Flowchart 13](images/flowchart13.png)
+![Flowchart 12](Images/flowchart12.png)
+![Flowchart 13](Images/flowchart13.png)
 
-![Flowchart 14](images/flowchart14.png)
+![Flowchart 14](Images/flowchart14.png)
 
-![Flowchart 15](images/flowchart15.png)
+![Flowchart 15](Images/flowchart15.png)
 
 
 ## Step by Step Guide 
