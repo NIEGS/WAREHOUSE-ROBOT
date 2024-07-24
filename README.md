@@ -25,8 +25,10 @@
 - Additionally, robots calculate the angle between their direction and the target location, rotating as needed to head directly toward the destination.
 
 ![Robot Overview](Images/route.gif)
+
 - For added realism, servomotors and wheels are simulated to rotate based on the robot's speed variable, ensuring that the wheels rotate faster as the robot moves faster.
-![Robot Overview](Images/sensor2.gif)  
+![Robot Overview](Images/sensor2.gif)
+
 ### Scalable robot arm script
 - A fully scalable robotic arm control script allows easy addition of joints and axes by editing game object settings in the Unity inspector. Each axis can be configured by adjusting its rotation axes, minimum and maximum angles, rotation speed, and associated Transform Object. Additionally, a simulated pneumatic actuator is included to pick up boxes and store them in the robot's basket.
 ![Robot Overview](Images/arm.gif)
