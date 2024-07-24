@@ -23,6 +23,7 @@
 - Simulated using triggers and box colliders, enabling robots to stop when they detect another robot in front of them. Robots also give priority to those detected on their right. Head-on collisions are prevented by the single-direction driving design of all nodes.
 ![Robot Overview](Images/sensor1.gif)
 - Additionally, robots calculate the angle between their direction and the target location, rotating as needed to head directly toward the destination.
+
 ![Robot Overview](Images/route.gif)
 - For added realism, servomotors and wheels are simulated to rotate based on the robot's speed variable, ensuring that the wheels rotate faster as the robot moves faster.
 ![Robot Overview](Images/sensor2.gif)  
