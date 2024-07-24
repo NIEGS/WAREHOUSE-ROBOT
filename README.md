@@ -22,7 +22,7 @@ A brief description of what your project does and its purpose.
 
 In this project, it aims to develop an efficient and autonomous warehouse management system using a swarm of robots. Each robot is designed to perform tasks such as moving and organizing inventory within a warehouse. To achieve this, it must be implemented using simulations such as Unity together with the programming language C#. 
 
-##Project Overview
+## Project Overview
 
 Each robot in this system consists of a base equipped with wheels, allowing it to navigate the warehouse. Attached to the base is a structure with an arm designed to pick up packages and place them into a basket structure located near the arm. This enables the robot to carry multiple packages simultaneously. The robots are equipped with GPS sensors for precise location tracking, and remote Wi-Fi connections for task reception.This simulation ensures that each robot can perform fundamental operations accurately. 
 
