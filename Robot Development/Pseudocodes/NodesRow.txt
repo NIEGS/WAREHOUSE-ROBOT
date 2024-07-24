@@ -1,0 +1,12 @@
+START
+
+Class NodesRow (inherits from MonoBehaviour):
+    - RowID is initially set to -1
+
+    Function Start:
+        Initial setup 
+
+    Function Update:
+        Actions to perform every frame 
+        
+END

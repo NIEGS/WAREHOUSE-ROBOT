@@ -1,0 +1,35 @@
+START
+
+Class Robot_wheels:
+    - Variables:
+        - wheel1 (Transform of the first wheel)
+        - wheel2 (Transform of the second wheel)
+        - wheel3 (Transform of the third wheel)
+        - wheel4 (Transform of the fourth wheel)
+        - robot (reference to the Robot instance)
+        - speed1 (speed of the first wheel)
+        - speed2 (speed of the second wheel)
+        - speed3 (speed of the third wheel)
+        - speed4 (speed of the fourth wheel)
+        - stop (whether the wheels should stop or not)
+        - forward_rotate (direction of rotation: true for forward, false for rotate)
+
+    Function Start:
+        - Initialization code (currently empty)
+
+    Function goForward(speed):
+        - Set all wheel speeds to -20 * speed
+        - Set forward_rotate to true
+        - Set stop to false
+
+    Function rotate(speed):
+        - Set speed1 and speed2 to -3 * speed
+        - Set speed3 and speed4 to 3 * speed
+        - Set forward_rotate to false
+        - Set stop to false
+
+    Function Update:
+        - If the robot is not in PickingUp state and the wheels are not stopped:
+            - If moving forward or rotating, rotate each wheel based on its speed and delta time
+
+END

@@ -1,0 +1,50 @@
+START
+
+Class Warehouse:
+    - Variables:
+        - robots (Array of Robot objects)
+        - nodos (Array of Warehouse_node objects)
+        - warehouse_Orders (reference to Warehouse_orders instance)
+
+    Function getAllRobots:
+        - Find all Robot objects in the scene
+        - Assign them to the robots array
+        - Log the number of robots found
+
+    Function initializeRobots:
+        - Initialize robotID for each Robot in robots array
+        - Set each Robot's warehouse reference to this Warehouse instance
+
+    Function getAllNodes:
+        - Find all Warehouse_node objects in the scene
+        - Assign them to the nodos array
+        - Log the number of nodes found
+
+    Function initializeNodes:
+        - Initialize nodeID for each Warehouse_node in nodos array
+
+    Function setRobotRoute(n, origin, destination):
+        - Get the Robot instance at index n
+        - If origin is -1, set origin to the Robot's closestNodeArrived
+        - Calculate the optimal route from origin to destination
+        - Create a new route for the Robot
+
+    Function firstRobotRoute(robotid, destination):
+        - Call gotoClosestNode() on the Robot at index robotid
+        - Set a route from the closest node to the destination for the Robot
+
+    Function robotsToClosestNodes:
+        - Set each Robot's state to NotReady
+        - Call gotoClosestNode() on each Robot
+
+    Function Start:
+        - Call getAllNodes()
+        - Call initializeNodes()
+        - Call getAllRobots()
+        - Call initializeRobots()
+        - Call robotsToClosestNodes()
+        - Set warehouse_Orders.robotsReady to true
+
+        - (Optional) Call firstRobotRoute() for some robots
+
+END

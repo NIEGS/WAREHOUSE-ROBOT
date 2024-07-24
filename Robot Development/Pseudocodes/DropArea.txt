@@ -1,0 +1,16 @@
+START
+
+Class DropArea:
+    Function Start:
+        Initial setup 
+
+    Function Update:
+        Actions to perform every frame 
+
+    Function OnTriggerEnter (when something enters the trigger area):
+        Get the object that entered the trigger area
+        Check if this object has a Robot component
+        If it has a Robot component:
+            Print "Robot drop" as an error message
+
+END

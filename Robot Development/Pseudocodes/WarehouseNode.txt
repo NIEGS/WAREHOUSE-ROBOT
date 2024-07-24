@@ -1,0 +1,22 @@
+START
+
+Class Warehouse_node:
+    - Variables:
+        - nodeID (Integer)
+        - directionX (Boolean)
+        - directionZ (Boolean)
+        - Edge1 (Integer)
+        - Edge2 (Integer)
+        - Edge3 (Integer)
+        - Edge4 (Integer)
+        - nodeRow (NodesRow)
+
+    Function Start:
+        - Get the NodesRow component from the parent game object and assign it to nodeRow
+        - If nodeRow is not null:
+            - Set Edge2 to nodeRow.RowID
+
+    Function Update:
+        - (No operations in Update function)
+
+END

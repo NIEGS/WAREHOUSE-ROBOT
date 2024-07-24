@@ -1,0 +1,31 @@
+START
+
+Class Robot_actuator:
+    - Variables:
+        - p0 (Float) = -0.85
+        - p1 (Float) = -1.15
+        - boxesContainer (GameObject)
+        - suctionTransform (Transform)
+        - robot (Robot)
+        - picked_box (Warehouse_box) = null
+
+    Function enableActuator:
+        - Set the localPosition of the actuator to (0, p1, 0)
+
+    Function disableActuator:
+        - If picked_box is not null:
+            - Call unpick() on picked_box
+            - Set the parent of picked_box's transform to boxesContainer
+            - Call addBox(picked_box) on the robot
+        - Set the localPosition of the actuator to (0, p0, 0)
+        - Set picked_box to null
+
+    Function OnTriggerEnter(collider: Collider):
+        - Get the Warehouse_box component from the collider's gameObject and assign it to r
+        - If r is not null and r.picked is false:
+            - If picked_box is null:
+                - Set picked_box to r
+                - Set r.act to suctionTransform
+                - Set r.picked to true
+
+END

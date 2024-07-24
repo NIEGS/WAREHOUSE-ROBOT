@@ -1,0 +1,36 @@
+START
+
+class WarehouseShelf:
+    int id = -1
+    int products = 2
+    int products_to_pick = 0
+    WarehouseNode node1
+    WarehouseNode node2
+    WarehouseOrders warehouse_orders
+    WarehouseBox[] boxes
+    bool generateOrderB = true
+
+    function Start():
+        initializeShelf()
+
+    function generateOrder() -> IEnumerator:
+        wait for random time between 1 and 20 seconds
+        if random chance > 80:
+            products_to_pick++
+            print "New order generated in node node1.nodeID"
+        else:
+            wait for random time between 10 and 80 seconds
+            if random chance > 50:
+                products_to_pick++
+                print "New order generated in node node1.nodeID"
+
+    function initializeShelf():
+        find WarehouseOrders instance and assign to warehouse_orders
+
+    function Update():
+        if generateOrderB and not training mode:
+            if warehouse_orders is not null:
+                generateOrderB = false
+                start generateOrder coroutine
+
+END

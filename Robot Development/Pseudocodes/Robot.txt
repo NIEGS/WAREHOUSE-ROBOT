@@ -1,0 +1,104 @@
+START
+
+Class Robot:
+    - Variables:
+        - robotID (Int) = -1
+        - positionB (Vector3)
+        - robotSpeed (Int) = 5
+        - rotateSpeed (Float) = 30
+        - optimalRoute (OptimalRoute)
+        - Yrotation (Float) = 0
+        - targetYrotation (Float) = 50
+        - warehouse (Warehouse)
+        - closestNodeArrived (Int) = -1
+        - TargetNodeID (Int) = -1
+        - containerCapacity (Int) = 2
+        - containerFilled (Int) = 0
+        - rightSensorCollision (Bool) = false
+        - robot_Arm (Robot_arm)
+        - shelf_target (Warehouse_shelf)
+        - shelf_node_p (Bool) = true
+        - incZ (Bool) = false
+        - warehousenodeTarget (Warehouse_node)
+        - RobotState (RobotStates) = RobotStates.NotReady
+        - robot_Wheels (Robot_wheels)
+        - dropArea (DropArea)
+        - dropNode (Warehouse_node)
+        - ramp (Transform)
+        - colliderRobot (Collider)
+
+    Enum RobotStates:
+        - Available
+        - OnWayToPick
+        - PickingUp
+        - OnWayToDrop
+        - PrepareUnloading
+        - RampGoingDown
+        - Unloading
+        - RampGoingUp
+        - NotReady
+
+    Function Start:
+        - Set Yrotation to the robot's current y-axis rotation
+        - Find and assign dropArea
+        - If dropArea is not null, assign dropNode
+
+    Function get2dvectortransform(v3: Vector3) -> Vector2:
+        - Convert Vector3 to Vector2 with x and z components
+        - Return the Vector2
+
+    Function gotoClosestNode:
+        - Find the closest Warehouse_node by comparing distances
+        - Set positionB to the closest node's position
+        - Set closestNodeArrived to the node's ID
+        - Log the action
+
+    Function gotoNode(node: Warehouse_node):
+        - If the last destination is different from the current node:
+            - If not on the way to the closest node, set it to true and call gotoClosestNode
+            - Otherwise, set lastDestination to node, update positionB, incZ, and TargetNodeID
+            - Log the action
+
+    Function addBox(b: Warehouse_box):
+        - Add the box to the robot's list of boxes
+        - Log the action
+
+    Function unloadBoxes:
+        - Enable gravity on all boxes and clear the list
+        - Log the action
+
+    Function goToDrop:
+        - Calculate and start the optimal route to dropNode
+        - Log the action or set RobotState to Available if dropNode is not found
+
+    Function goToRoute(nodesToVisit: ArrayList):
+        - Go to each node in the route from the last position visited
+
+    Function createNewRoute(r: ArrayList):
+        - Set nodeRoute and lastRoutePositionVisited
+
+    Function calculateTargetYrotation(tow: Vector3):
+        - Calculate the target Y rotation to face the target position
+        - Adjust targetYrotation based on incZ
+
+    Coroutine waitToUnload:
+        - Wait for 0.5 seconds, then set RobotState to RampGoingUp and log the action
+
+    Function Update:
+        - Handle different RobotStates:
+            - RampGoingDown or RampGoingUp:
+                - Stop wheels and manage ramp rotation
+            - Unloading:
+                - Stop wheels, clear the container, and wait to unload
+            - Movement and Rotation:
+                - Move towards positionB, calculate target rotation, and rotate if needed
+                - Update RobotState based on arrival or conditions
+            - PickingUp:
+                - Rotate the robot arm for picking up boxes
+            - Available:
+                - Check if the container is full and start heading to drop if so
+
+    Function OnCollisionEnter(collision: Collision):
+        - Ignore collision with Warehouse_box objects
+
+END

@@ -1,0 +1,52 @@
+START
+
+Class Robot_arm:
+    - JointAxis enumeration with values X, Y, Z
+
+    - Variables:
+        - joints (list of joint game objects)
+        - joints_axis (list of axis for each joint)
+        - minAngles (list of minimum angles for each joint)
+        - maxAngles (list of maximum angles for each joint)
+        - rotateSpeed (list of rotation speeds for each joint)
+        - targetAngles (list of target angles for each joint)
+        - rotating (boolean to indicate if rotation is in progress)
+        - rotated (counter for completed rotations)
+        - actuator (reference to Robot_actuator)
+        - quaternions (list of quaternion rotations)
+        - id, rotatedN (counters for tracking rotations)
+
+    Function getJointRotation(id):
+        - Return the current rotation of the joint based on its axis
+
+    Function JointQuaternion(id, angle):
+        - Create a quaternion for the given joint and angle
+
+    Function setJointSpeed(id, speed):
+        - Set the rotation speed for the given joint
+
+    Function rotateJoint(id, angle):
+        - Normalize the angle within the range [0, 360]
+        - Create a new quaternion for the joint
+        - Update the quaternion and target angle for the joint
+
+    Function enableActuator:
+        - Call the enableActuator function of the actuator
+
+    Function disableActuator:
+        - Call the disableActuator function of the actuator
+
+    Function Start:
+        - Initialize the quaternion list with default rotations
+
+    Function Update:
+        - If rotating:
+            - Loop through each joint:
+                - Get the target and current rotation for the joint
+                - Check if the joint has reached the target rotation
+                - If not, rotate the joint towards the target rotation
+            - If all joints have reached their target rotations:
+                - Increment rotated counter
+                - Set rotating to false
+
+END

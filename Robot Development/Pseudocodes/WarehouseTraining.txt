@@ -1,0 +1,48 @@
+START
+
+Class Warehouse_training:
+    - Variables:
+        - warehouse (Warehouse)
+        - warehouse_Orders (Warehouse_orders)
+        - trainingMode (Boolean, static)
+        - robotsFinished (Integer, static)
+        - bestWeights (Warehouse_orders.formulaWeights)
+        - minLoss (Float)
+        - iteration_start_time (Float)
+        - iteration_elapsed_time (Float)
+        - variable_learning_rate (Float)
+        - firstIteration (Boolean)
+        - ordersPerIteration (Integer)
+
+    Function Start:
+        - If trainingMode is true:
+            - If "formula_weight_loss" exists in PlayerPrefs:
+                - Set minLoss to the saved value
+
+    Function newWeights:
+        - Generate a random learning rate for each weight
+        - Update formula weights using the learning rate and elapsed time
+        - (Optional) Log new weights
+
+    Function startTrainingIteration:
+        - Log "startTrainingIteration"
+        - If this is not the first iteration:
+            - Call newWeights to update weights
+        - Set iteration_start_time to the current time
+        - For each Warehouse_shelf r in warehouse_Orders.shelves:
+            - Randomly set r.products_to_pick to 1 with a 60% chance
+
+    Function Update:
+        - If trainingMode is true:
+            - If robotsFinished is greater than or equal to ordersPerIteration:
+                - Reset robotsFinished to 0
+                - Calculate iteration_elapsed_time as the difference between the current time and iteration_start_time
+                - Set cLoss to iteration_elapsed_time
+                - If cLoss is less than minLoss or minLoss is not set:
+                    - Update minLoss to cLoss
+                    - Update bestWeights to current formula weights
+                    - Save minLoss and bestWeights to PlayerPrefs
+                - Log iteration elapsed time
+                - Start a new training iteration by calling startTrainingIteration
+
+END

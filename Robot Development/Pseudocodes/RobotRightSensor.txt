@@ -1,0 +1,21 @@
+START
+
+Class Robot_rightSensor:
+    - Variables:
+        - robot (reference to the Robot instance)
+
+    Function Start:
+        - Initialization code (currently empty)
+
+    Function Update:
+        - Update code (currently empty)
+
+    Function OnTriggerEnter(collider):
+        - Check if the collided object is a Robot
+        - If it is a Robot, set robot's rightSensorCollision to true
+
+    Function OnTriggerExit(collider):
+        - Check if the exited object is a Robot
+        - If it is a Robot, set robot's rightSensorCollision to false
+
+END

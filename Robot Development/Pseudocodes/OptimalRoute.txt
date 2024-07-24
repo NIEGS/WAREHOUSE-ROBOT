@@ -1,0 +1,42 @@
+START
+
+Class OptimalRoute:
+    - Variables:
+        - robot (Robot)
+        - minimaDistanciaTotal (Float) = -1
+        - bestRoute (List<Warehouse_node>) = empty list
+
+    Function Start:
+        - (Empty in this implementation)
+
+    Function nodeDirection(n1: Warehouse_node, n3: Warehouse_node) -> Bool:
+        - Initialize r as false
+        - If n1 and n3 are on the same Z edge:
+            - Compare Z positions based on n1's directionZ
+            - Update r if conditions are met
+        - Else if n1 and n3 are on the same X edge:
+            - Compare X positions based on n1's directionX
+            - Update r if conditions are met
+        - Return r
+
+    Function routeRec(n1: Warehouse_node, n2: Warehouse_node, routeR: List<Warehouse_node>, distanciaActual: Float):
+        - For each node n3 in robot.warehouse.nodos:
+            - If n3 is not n1 and routeR has less than 6 nodes:
+                - Check if n1 and n3 are on the same edge and n1's edge is not -1
+                - If the direction from n1 to n3 is valid:
+                    - If n3 is not already in routeR:
+                        - Create a new route including n3
+                        - Calculate the new distance from n1 to n3
+                        - If n3 is the destination node (n2):
+                            - Update the bestRoute if the new distance is shorter
+                        - Else, recursively call routeRec to continue building the route
+
+    Function calculateOptimalRoute(n1: Warehouse_node, n2: Warehouse_node) -> ArrayList:
+        - Log the start of route calculation
+        - Initialize bestRoute as an empty list
+        - Initialize route with n1
+        - Call routeRec to find the best route from n1 to n2
+        - Create an ArrayList of node IDs from bestRoute
+        - Return the ArrayList of node IDs
+
+END

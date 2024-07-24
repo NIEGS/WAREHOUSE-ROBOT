@@ -1,0 +1,74 @@
+START
+
+Class Warehouse_orders:
+    - Variables:
+        - warehouse (Warehouse)
+        - shelves (Array of Warehouse_shelf)
+        - robotsReady (Boolean)
+        - warehouse_Training (Warehouse_training)
+        - globalOrders (List of OrderInfo)
+        - formula_weights (formulaWeights)
+
+    Class OrderInfo:
+        - Variables:
+            - node (Warehouse_node)
+            - quantity (Integer)
+        - Constructor:
+            - Parameters:
+                - node (Warehouse_node)
+                - quantity (Integer)
+            - Set this.node to node
+            - Set this.quantity to quantity
+
+    Function getAllShelves:
+        - Find all Warehouse_shelf objects in the scene and assign to shelves
+        - Log the number of shelves found
+
+    Function initializeShelves:
+        - Initialize the id and warehouse_orders properties for each shelf
+        - If training mode is active, start training iteration
+
+    Function basicAssignation(Warehouse_shelf n, Warehouse_node nodo):
+        - Determine the quantity of products to pick from shelf n
+        - For each Robot r in warehouse.robots:
+            - If r is available and has space in the container:
+                - Calculate how many products r can pick
+                - Update shelf n's products to pick and robot r's target
+                - Set robot r's route and change its state to OnWayToPick
+                - Update the quantity of products picked by r
+
+    Function calculateMetric(Robot r, Warehouse_shelf n, Warehouse_node nodo, quantityToPickup):
+        - Calculate distance between robot r and node nodo
+        - Calculate the metric using formula_weights and return it
+
+    Function improvedAssignation(Warehouse_shelf n, Warehouse_node nodo):
+        - Initialize bestRobotForTask, bestMetric, bestRobotquantityToPickup, and bestProductstoPick
+        - For each Robot r in warehouse.robots:
+            - If r is available and has space in the container:
+                - Calculate quantity to pick and update shelf n's products
+                - Calculate the metric for r and choose the robot with the best metric
+                - Update shelf n's products and robot r's target
+                - Set robot r's route and change its state to OnWayToPick
+
+    Function assignationStrategy(int strategy, Warehouse_shelf n, Warehouse_node nodo):
+        - Switch based on strategy:
+            - Case 0: Call basicAssignation(n, nodo)
+            - Case 1: Call improvedAssignation(n, nodo)
+
+    Function assignRobot:
+        - For each Warehouse_shelf n in shelves:
+            - Choose a random Warehouse_node from shelf n
+            - If there are products to pick, use assignationStrategy to assign the robot
+
+    Function addOrder(Warehouse_node node, int quantity):
+        - Create a new OrderInfo with node and quantity
+        - Add it to globalOrders
+
+    Function Start:
+        - Load formula weights from PlayerPrefs or use default values
+        - Call getAllShelves and initializeShelves
+
+    Function Update:
+        - If robotsReady is true, call assignRobot
+
+END

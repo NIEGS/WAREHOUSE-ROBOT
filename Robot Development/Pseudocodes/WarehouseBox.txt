@@ -1,0 +1,34 @@
+START
+
+Class Warehouse_box:
+    - Variables:
+        - picked (Boolean)
+        - act (Transform)
+        - rig (Rigidbody)
+        - bc (BoxCollider)
+        - bshelf (Transform)
+
+    Function disableGravity:
+        - Wait for 0.5 seconds
+        - Set rig.isKinematic to true
+        - Set rig.useGravity to false
+        - Disable bc (BoxCollider)
+
+    Function enableGravity:
+        - Set rig.isKinematic to false
+        - Set rig.useGravity to true
+        - Enable bc (BoxCollider)
+        - If bshelf is not null:
+            - Set the parent of transform to bshelf
+
+    Function unpick:
+        - Set picked to false
+        - Set rig.isKinematic to false
+        - Set rig.useGravity to true
+        - Start coroutine disableGravity
+
+    Function Update:
+        - If picked is true and act is not null:
+            - Set transform.position to the position of act
+
+END
