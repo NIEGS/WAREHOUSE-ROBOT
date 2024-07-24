@@ -36,6 +36,7 @@
 ### Unloading boxes
 - A fully scalable robotic arm control script allows easy addition of joints and axes by editing game object settings in the Unity inspector. Each axis can be configured by adjusting its rotation axes, minimum and maximum angles, rotation speed, and associated Transform Object.
 - ![Robot Overview](Images/ramp.gif)
+  
 ### Unloading zone
 - When robots reach their maximum box load capacity and are in the Available state, they automatically change to OnWayToDrop and head to the unloading zone. There, they smoothly unload the boxes onto a conveyor belt using a rotatable ramp, which then transports the boxes to a large container.
 ### Software architecture of the simulation
