@@ -1,5 +1,5 @@
 # Autonomous Warehouse Robot
-![Robot Overview](over.gif)
+![Robot Overview](images/over.gif)
 ## Introduction
 - In this project, it aims to develop an efficient and autonomous warehouse management system using a swarm of robots. Each robot is designed to perform tasks such as moving and organizing inventory within a warehouse. To achieve this, it must be implemented using simulations such as Unity together with the programming language C#. 
 ## Project Overview
@@ -38,37 +38,37 @@
 - RampGoingUp: Elevating the ramp after completing box unloading.
 
 ### Warehouse Robot Diagram
-![Diagram 1](diagram1.png)
+![Diagram 1](images/diagram1.png)
 
-![Diagram 2](diagram2.png)
+![Diagram 2](images/diagram2.png)
 
 ### Warehouse Robot Flowchart
-![Flowchart 1](flowchart1.png)
+![Flowchart 1](images/flowchart1.png)
 
-![Flowchart 2](flowchart2.png)
-![Flowchart 3](flowchart3.png)
+![Flowchart 2](images/flowchart2.png)
+![Flowchart 3](images/flowchart3.png)
 
-![Flowchart 4](flowchart4.png)
-![Flowchart 5](flowchart5.png)
+![Flowchart 4](images/flowchart4.png)
+![Flowchart 5](images/flowchart5.png)
 
-![Flowchart 6](flowchart6.png)
+![Flowchart 6](images/flowchart6.png)
 
-![Flowchart 7](flowchart7.png)
+![Flowchart 7](images/flowchart7.png)
 
-![Flowchart 8](flowchart8.png)
+![Flowchart 8](images/flowchart8.png)
 
-![Flowchart 9](flowchart9.png)
+![Flowchart 9](images/flowchart9.png)
 
-![Flowchart 10](flowchart10.png)
+![Flowchart 10](images/flowchart10.png)
 
-![Flowchart 11](flowchart11.png)
+![Flowchart 11](images/flowchart11.png)
 
-![Flowchart 12](flowchart12.png)
-![Flowchart 13](flowchart13.png)
+![Flowchart 12](images/flowchart12.png)
+![Flowchart 13](images/flowchart13.png)
 
-![Flowchart 14](flowchart14.png)
+![Flowchart 14](images/flowchart14.png)
 
-![Flowchart 15](flowchart15.png)
+![Flowchart 15](images/flowchart15.png)
 
 
 ## Step by Step Guide 
