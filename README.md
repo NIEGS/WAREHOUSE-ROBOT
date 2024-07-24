@@ -4,8 +4,9 @@ A brief description of what your project does and its purpose.
 
 ## Components
 1.Robot Development
+
 2.Lesson Plan Creation
-3.Presentation
+
 
 ## Table of Contents
 
