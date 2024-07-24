@@ -46,7 +46,7 @@
 
 ![Flowchart 2](flowchart2.png)
 
-![Flowchart 3(flowchart3.png)
+![Flowchart 3](flowchart3.png)
 
 ![Flowchart 4](flowchart4.png)
 
