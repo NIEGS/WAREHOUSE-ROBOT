@@ -40,8 +40,8 @@
   [View Project Documentation](https://docs.google.com/document/d/1z00WWJby2H_2fDr9AnieJ0wVluwxYejQ/editusp=sharing&ouid=101734205070446539416&rtpof=true&sd=true)
 
 ## Hands on Activities
-  [View Project Documentation]
-(https://docs.google.com/document/d/1QbCU5kkR3be_CvvwBwkss8JpcggZEdoY/edit?usp=sharing&ouid=101734205070446539416&rtpof=true&sd=true).
+  [View Project Documentation](https://docs.google.com/document/d/1QbCU5kkR3be_CvvwBwkss8JpcggZEdoY/edit?usp=sharing&ouid=101734205070446539416&rtpof=true&sd=true).
+
 
 
 
