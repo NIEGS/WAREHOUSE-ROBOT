@@ -10,8 +10,10 @@
 - Through this project, it can help to apply various skills and concepts, including robotic kinematics, and swarm intelligence. The use of Unity and C# help to create a scalable and efficient simulation environment. This project not only demonstrates the practical application of these skills but also highlights their importance in developing advanced autonomous systems for real-world scenarios. And lastly, this module enhances skills of students in unity and C# programming language.
   
 ## Features and Functionalities
+### Coordinated robot swarm
+- The system for assigning robots to collect boxes in a warehouse optimizes efficiency by using a formula to assign tasks based on minimal distance. The automatic training script enhances this system by iteratively adjusting the formula's weights to minimize the total collection time. When activated, this training mode adjusts the weights after processing a specific number of orders, continuously refining the process. The optimal values are stored in PlayerPrefs for persistent use, ensuring that the system improves over time, consistently reducing the overall order processing time and enhancing the operational efficiency of the warehouse.
 ### Nodes with a single direction of circulation
-- The warehouse is mapped as a directed graph using a system summarized by four variables for each node: two integers and two booleans. The integers represent the set of nodes to which each node belongs and is connected, while the booleans indicate the positive or negative directions in the X and Z axes
+- The warehouse is mapped as a directed graph using a system summarized by four variables for each node: two integers and two booleans. The integers represent the set of nodes to which each node belongs and is connected, while the booleans indicate the positive or negative directions in the X and Z axes.
 ### Autonomous robots
 - Each robot in the warehouse has scripts to calculate and follow optimal routes between nodes, allowing them to navigate efficiently from any point to another. If a robot is outside the warehouse, such as when charging its battery, it automatically locates and moves to the nearest node.
 ### Proximity sensors
