@@ -1,5 +1,5 @@
 # Autonomous Warehouse Robot
-![Robot Overview](images/over.gif)
+![Robot Overview](Images/over.gif)
 ## Introduction
 - In this project, it aims to develop an efficient and autonomous warehouse management system using a swarm of robots. Each robot is designed to perform tasks such as moving and organizing inventory within a warehouse. To achieve this, it must be implemented using simulations such as Unity together with the programming language C#. 
 ## Project Overview
