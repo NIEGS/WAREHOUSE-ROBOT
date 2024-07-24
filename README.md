@@ -49,6 +49,7 @@
 - Unloading: Engaged in the process of unloading boxes.
 - RampGoingUp: Elevating the ramp after completing box unloading.
 - The robot begins in the NotReady state outside the warehouse, uses node locations to find the closest one, and rotates to face it. Upon reaching a node, it switches to Available. In this state, the Warehouse_orders.cs script assigns tasks like picking up boxes, transitioning the robot to OnWayToPick, then to PickingUp when at the box. If the container fills, it changes to OnWayToDrop, unloads boxes (PrepareUnloading, RampGoingDown, Unloading, RampGoingUp), then returns to Available. Customizable variables like speed and capacity are adjustable in Unity, and new robots can be added easily without code modification, detected automatically by scripts upon startup.
+
 ![Robot Overview](Images/script1.png)
 Warehouse.cs
 - The script manages initialization of all nodes and robots in the scene, maintaining lists of both entities. It ensures robots are prepared after reaching their nearest node, ready to begin order collection. Using the setRobotRoute method, it assigns routes to robots, facilitating movement between nodes within the warehouse or starting from the robot's closest node.
