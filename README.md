@@ -103,12 +103,12 @@ Robot.cs coordinates with Robot_wheels.cs to manipulate the stop variable, ensur
 ![Robot Overview](Images/script10.png)
 
 
-### Warehouse Robot Diagram
+## Warehouse Robot Diagram
 ![Diagram 1](Images/diagram1.png)
 
 ![Diagram 2](Images/diagram2.png)
 
-### Warehouse Robot Flowchart
+## Warehouse Robot Flowchart
 ![Flowchart 1](Images/flowchart1.png)
 
 ![Flowchart 2](Images/flowchart2.png)
