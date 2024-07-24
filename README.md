@@ -42,7 +42,8 @@
 ## Hands on Activities
   [View Project Documentation](https://docs.google.com/document/d/1QbCU5kkR3be_CvvwBwkss8JpcggZEdoY/edit?usp=sharing&ouid=101734205070446539416&rtpof=true&sd=true).
 
-
+### Warehouse Robot Diagram
+![Warehouse Robot Diagram](images/system-diagram1.png) (images/system-diagram2.png)
 
 
 
