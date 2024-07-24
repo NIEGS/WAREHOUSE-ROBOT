@@ -150,7 +150,7 @@ Robot.cs coordinates with Robot_wheels.cs to manipulate the stop variable, ensur
 - **Jude Gajitos**
 - **Archie Manalo**
 - **Lucky Millare**
-- ****Baron Niegos**
+- **Baron Niegos**
 - **Sancon Baldemor Simon**
 - **Nicko Venancio**
 
