@@ -69,8 +69,6 @@
 
 ![Flowchart 15](flowchart15.png)
 
-### Warehouse Robot Flowchart 
-
 
 ## Step by Step Guide 
   [View Project Documentation](https://docs.google.com/document/d/1z00WWJby2H_2fDr9AnieJ0wVluwxYejQ/editusp=sharing&ouid=101734205070446539416&rtpof=true&sd=true)
@@ -80,28 +78,3 @@
 
 
 
-
-
-
-
-
-## Table of Contents
-- [Introduction](#Introduction)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
-## Installation
-### Prerequisites
-- [Robot Operating System (ROS)](http://www.ros.org/)
-- Python 3.x
-- [Gazebo Simulator](http://gazebosim.org/)
-- Additional dependencies listed in `requirements.txt`
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/autonomous-warehouse-robot.git
-   cd autonomous-warehouse-robot
